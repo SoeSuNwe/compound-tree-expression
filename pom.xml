@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.intuit.graphql</groupId>
-    <artifactId>graphql-filter-java</artifactId>
+    <groupId>gw.graphql.filter</groupId>
+    <artifactId>graphql-filter-java-with-compound-tree</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <name>${project.artifactId}</name>
     <description>A java library to transform graphql filter into database filter</description>
-    <url>https://github.com/intuit/graphql-filter-java</url>
+    <url>https://github.com/SoeSuNwe/compound-tree-expression</url>
 
     <licenses>
         <license>
@@ -22,17 +22,15 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/intuit/graphql-filter-java</url>
-        <connection>scm:git:git://github.com/intuit/graphql-filter-java.git</connection>
-        <developerConnection>scm:git:git@github.com:intuit/graphql-filter-java.git</developerConnection>
+        <url>https://github.com/SoeSuNwe/compound-tree-expression</url>
     </scm>
 
     <developers>
         <developer>
-            <name>Saurabh Jaiswal</name>
-            <id>jaiswalsk</id>
-            <organization>Intuit, Inc.</organization>
-            <organizationUrl>http://www.intuit.com</organizationUrl>
+            <name>Soe Su Nwe</name>
+            <id>SoeSuNwe</id>
+            <organization>GalaxyWave</organization>
+            <organizationUrl>www.galaxy.wave.com</organizationUrl>
         </developer>
     </developers>
 
@@ -46,17 +44,6 @@
         <jpa.version>2.2</jpa.version>
         <junit.version>4.13.1</junit.version>
     </properties>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
     <dependencies>
         <dependency>
