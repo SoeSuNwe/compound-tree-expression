@@ -3,8 +3,7 @@ package gw.client;
 public enum ExpressionFormat {
     SQL("SQL"),
     INFIX("INFIX"),
-    JPA("JPA"),
-    MONGO("MONGO");
+    JPA("JPA");
 
     private String type;
     ExpressionFormat(String type) {

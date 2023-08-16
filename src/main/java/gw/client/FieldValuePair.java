@@ -8,20 +8,10 @@ public class FieldValuePair<V> {
         this.fieldName = fieldName;
         this.value = value;
     }
-
-    /**
-     * Returns the field name.
-     *
-     * @return
-     */
     public String getFieldName() {
         return fieldName;
     }
 
-    /**
-     * Returns the field value.
-     * @return
-     */
     public V getValue() {
         return value;
     }

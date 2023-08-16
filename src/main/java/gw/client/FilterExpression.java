@@ -19,10 +19,6 @@ public class FilterExpression {
         this.fieldValueTransformer = expressionBuilder.fieldValueTransformer;
     }
 
-    /**
-     * Builder class responsible for building the
-     * instance of FilterExpression class.
-     */
     public static class FilterExpressionBuilder {
 
         private Field field;
@@ -78,13 +74,6 @@ public class FilterExpression {
         return new FilterExpressionBuilder();
     }
 
-    /**
-     * This method returns the expression in
-     * required format.
-     * @param format
-     * @param <T>
-     * @return
-     */
     public <T> T getExpression(ExpressionFormat format) {
         if (expressionAst == null) {
             throw new InvalidFilterException("Missing or invalid filter arguments");

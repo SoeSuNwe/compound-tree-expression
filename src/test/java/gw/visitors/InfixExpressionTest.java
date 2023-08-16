@@ -115,4 +115,15 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         Assert.assertEquals(expectedExpression,parent);
         System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
     }
+    @Test
+    public void filterExpressionWithNotCompound () {
+        ExecutionResult result = getGraphQL().execute(TestConstants.NOT_COMPOUND_FILTER);
+        System.out.println(TestConstants.NOT_COMPOUND_FILTER);
+        String parent = getEmployeeDataFetcher().getExpression();
+
+        String expectedExpression = "( NOT ((firstName equals Saurabh) and (lastName contains Jaiswal)))";
+
+        Assert.assertEquals(expectedExpression,parent);
+        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+    }
 }
