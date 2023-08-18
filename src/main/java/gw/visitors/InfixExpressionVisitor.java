@@ -24,6 +24,7 @@ public class InfixExpressionVisitor implements ExpressionVisitor<String>{
         if (expression != null) {
             expressionString = expression.accept(this, expressionString);
         }
+        System.out.println("expressionString=>" + expressionString);
         return expressionString;
     }
 
@@ -35,6 +36,7 @@ public class InfixExpressionVisitor implements ExpressionVisitor<String>{
                 .append(" ").append(compoundExpression.getOperator().getName()).append(" ")
                 .append(compoundExpression.getRightOperand().accept(this, ""))
                 .append(")");
+        System.out.println("visitCompoundExpression=>" + expressionBuilder.toString());
         return expressionBuilder.toString();
     }
 
@@ -46,6 +48,7 @@ public class InfixExpressionVisitor implements ExpressionVisitor<String>{
                 .append(" ").append(binaryExpression.getOperator().getName()).append(" ")
                 .append(binaryExpression.getRightOperand().accept(this, ""))
                 .append(")");
+        System.out.println("visitBinaryExpression=>" + expressionBuilder.toString());
         return expressionBuilder.toString();
     }
 
@@ -56,6 +59,7 @@ public class InfixExpressionVisitor implements ExpressionVisitor<String>{
                 .append(" ").append(unaryExpression.getOperator()).append(" ")
                 .append(unaryExpression.getLeftOperand().accept(this, ""))
                 .append(")");
+        System.out.println("visitUnaryExpression=>" + expressionBuilder.toString());
         return expressionBuilder.toString();
     }
 
@@ -70,6 +74,8 @@ public class InfixExpressionVisitor implements ExpressionVisitor<String>{
         } else {
             expressionBuilder.append(field.infix());
         }
+        System.out.println("visitExpressionField=>" + expressionBuilder.toString());
+
         return expressionBuilder.toString();
     }
 
@@ -85,6 +91,7 @@ public class InfixExpressionVisitor implements ExpressionVisitor<String>{
 
         StringBuilder expressionBuilder = new StringBuilder(data);
         expressionBuilder.append(value.value());
+        System.out.println("visitExpressionValue=>" + expressionBuilder.toString());
         return expressionBuilder.toString();
     }
 }

@@ -27,7 +27,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "(firstName contains Saurabh)";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -38,7 +38,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "(age gte 25)";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -49,7 +49,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "((firstName contains Saurabh) or (lastName equals Jaiswal))";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -60,7 +60,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "((firstName contains Saurabh) and (lastName equals Jaiswal))";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -71,7 +71,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "((firstName contains Saurabh) or ((lastName equals Jaiswal) and (age gte 25)))";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -81,7 +81,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "((firstName contains Saurabh) and ((lastName equals Jaiswal) or (age gte 25)))";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -91,7 +91,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "(((firstName contains Saurabh) or (lastName equals Jaiswal)) or ((firstName equals Vinod) and (age gte 30)))";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -101,7 +101,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "(((firstName contains Saurabh) and (lastName equals Jaiswal)) and ((firstName equals Vinod) or (age gte 30)))";
 
         Assert.assertEquals(expectedExpression, getEmployeeDataFetcher().getExpression());
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 
     @Test
@@ -113,7 +113,7 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "((firstName contains Saurabh) and (lastName equals Jaiswal))";
 
         Assert.assertEquals(expectedExpression,parent);
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
     @Test
     public void filterExpressionWithNotCompound () {
@@ -124,6 +124,6 @@ public class InfixExpressionTest extends BaseFilterExpressionTest {
         String expectedExpression = "( NOT ((firstName equals Saurabh) and (lastName contains Jaiswal)))";
 
         Assert.assertEquals(expectedExpression,parent);
-        System.out.println("--------------------------------------------"+expectedExpression+"----------------------------------------------\n");
+        System.out.println("--------------------------------------------"+getEmployeeDataFetcher().getExpression()+"----------------------------------------------\n");
     }
 }

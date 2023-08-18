@@ -19,12 +19,12 @@ import java.util.stream.Collectors;
 public abstract class BaseFilterExpressionTest {
 
     private GraphQL graphQL;
-    private SampleDataFetcher employeeDataFetcher;
+    private SampleDataFetcher sampleDataFetcher;
 
     @Before
     public void init() throws IOException {
 
-        employeeDataFetcher = new SampleDataFetcher();
+        sampleDataFetcher = new SampleDataFetcher();
         String schemaFile=  "D:\\JavaLeaning\\compound-tree\\target\\test-classes\\schema.graphql";
         Path filePath = Paths.get(Paths.get(schemaFile).toString());
         String sdl = Files.lines(Paths.get(filePath.toUri()), StandardCharsets.UTF_8).
@@ -48,6 +48,6 @@ public abstract class BaseFilterExpressionTest {
     }
 
     public SampleDataFetcher getEmployeeDataFetcher() {
-        return employeeDataFetcher;
+        return sampleDataFetcher;
     }
 }
